@@ -12,6 +12,9 @@ html {
 }
 
 body {
+    font-size: 17px;
+    line-height: 22px;
+    color: #4c4c4c;
     overflow-x: hidden;
 }
 
@@ -41,14 +44,22 @@ h6 {
     margin: 0;
 }
 .container {
-    max-width: 1550px;
+    max-width: 1200px;
     width: 100%;
     margin: 0 auto;
-    padding: 0 25px;
+    padding: 0 15px;
     box-sizing: border-box;
 }
 
 .btn {
+}
+
+.title {
+    font-family: 'Trivia-Book', Times, serif;
+    text-transform: uppercase;
+    color: #4b636e;
+    font-size: 33px;
+    line-height: 38px;
 }
 
 // Input number fix

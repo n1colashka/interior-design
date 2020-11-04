@@ -1,8 +1,28 @@
 @font-face {
-  font-family: "Montserrat-Regular";
-  src: url("../fonts/Montserrat-Regular.woff2") format("woff2"),
-  url("../fonts/Montserrat-Regular.woff") format("woff"),
-  url("../fonts/Montserrat-Regular.ttf") format("opentype");
+  font-family: "Akzidenz";
+  src: url("../fonts/AkzidenzGroteskPro-Regular.woff2") format("woff2"),
+  url("../fonts/AkzidenzGroteskPro-Regular.woff") format("woff"),
+  url("../fonts/AkzidenzGroteskPro-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Trivia";
+  src: url("../fonts/TriviaSerif.woff2") format("woff2"),
+  url("../fonts/TriviaSerif.woff") format("woff"),
+  url("../fonts/TriviaSerif.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Trivia-Book";
+  src: url("../fonts/TriviaSerif-Book.woff2") format("woff2"),
+  url("../fonts/TriviaSerif-Book.woff") format("woff"),
+  url("../fonts/TriviaSerif-Book.ttf") format("truetype");
   font-style: normal;
   font-weight: 400;
   font-display: swap;

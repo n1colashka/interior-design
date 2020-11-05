@@ -9,10 +9,10 @@
 }
 
 @font-face {
-  font-family: "Trivia";
-  src: url("../fonts/TriviaSerif.woff2") format("woff2"),
-  url("../fonts/TriviaSerif.woff") format("woff"),
-  url("../fonts/TriviaSerif.ttf") format("truetype");
+  font-family: "Trivia-Regular";
+  src: url("../fonts/TriviaSerif-Regular.woff2") format("woff2"),
+  url("../fonts/TriviaSerif-Regular.woff") format("woff"),
+  url("../fonts/TriviaSerif-Regular.ttf") format("truetype");
   font-style: normal;
   font-weight: 400;
   font-display: swap;
@@ -23,6 +23,16 @@
   src: url("../fonts/TriviaSerif-Book.woff2") format("woff2"),
   url("../fonts/TriviaSerif-Book.woff") format("woff"),
   url("../fonts/TriviaSerif-Book.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Trivia-Hairline";
+  src: url("../fonts/TriviaSerif-Hairline.woff2") format("woff2"),
+  url("../fonts/TriviaSerif-Hairline.woff") format("woff"),
+  url("../fonts/TriviaSerif-Hairline.ttf") format("truetype");
   font-style: normal;
   font-weight: 400;
   font-display: swap;

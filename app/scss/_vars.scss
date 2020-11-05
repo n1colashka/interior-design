@@ -1,20 +1,21 @@
-$grey: #676767;
+$primary: #4b636e;
+$light: #78909c;
 
 @mixin font($name) {
-    @if $name == 'ms' {
-        font-family: 'Montserrat-Regular', Arial, Helvetica, sans-serif;
+    @if $name == 'akzidenz' {
+        font-family: 'Akzidenz', Arial, Helvetica, sans-serif;
         font-weight: 400;
     }
-    @if $name == 'ms-medium' {
-        font-family: 'Montserrat-Medium', Arial, Helvetica, sans-serif;
-        font-weight: 500;
+    @if $name == 'trivia' {
+        font-family: 'Trivia-Regular', Arial, Helvetica, sans-serif;
+        font-weight: 400;
     }
-    @if $name == 'ms-semibold' {
-        font-family: 'Montserrat-SemiBold', Arial, Helvetica, sans-serif;
-        font-weight: 600;
+    @if $name == 'trivia-book' {
+        font-family: 'Trivia-Book', Arial, Helvetica, sans-serif;
+        font-weight: 400;
     }
-    @if $name == 'ms-bold' {
-        font-family: 'Montserrat-Bold', Arial, Helvetica, sans-serif;
-        font-weight: 700;
+    @if $name == 'trivia-hairline' {
+        font-family: 'Trivia-Hairline', Arial, Helvetica, sans-serif;
+        font-weight: 400;
     }
 }  

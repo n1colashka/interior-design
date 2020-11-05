@@ -9,12 +9,15 @@
 html {
     box-sizing: border-box;
     overflow-x: hidden;
+    height: 100%;
 }
 
 body {
+    @include font('trivia-hairline');
     font-size: 17px;
     line-height: 22px;
     color: #4c4c4c;
+    height: 100%;
     overflow-x: hidden;
 }
 
@@ -52,10 +55,40 @@ h6 {
 }
 
 .btn {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    display: inline-block;
+    color: #4b636e;
+    border: 1px solid #4b636e;
+    padding: 13px 20px;
+    transition: .3s ease;
+
+    &:hover {
+        background-color: $primary;
+        color: #ffffff;
+    }
+}
+
+.btn--dark {
+    border-color: transparent;
+    background-color: $primary;
+    color: #ffffff;
+
+    &:hover {
+        background-color: #ffffff;
+        color: $primary;
+        border-color: $primary; 
+    }
+}
+
+.btn--light {
+    border: 1px solid #c5c5c5;
+    color: #c5c5c5;
 }
 
 .title {
-    font-family: 'Trivia-Book', Times, serif;
+    @include font('trivia-book');
     text-transform: uppercase;
     color: #4b636e;
     font-size: 33px;

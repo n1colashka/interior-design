@@ -5,6 +5,14 @@
 
 }
 
+@media (max-width: 1140px) {
+    .header {
+        &__top {
+            justify-content: space-around;
+        }
+    }
+}
+
 @media (max-width: 1024px) {
 }
 
@@ -12,10 +20,133 @@
 }
 
 @media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+    
+    .header {
+        &__logo {
+            img {
+                width: 250px;
+            }
+        }
+
+        &__phone {
+            font-size: 26px;
+        }
+    }
+    
+    .navigation {
+        &__inner {
+            flex-direction: column;
+            padding-top: 40px;
+
+            ul {
+                display: none;
+            }
+
+            &.active > ul {
+                display: block;
+            }
+        }
+
+        &__list {
+            flex-direction: column;
+            width: 100%;
+
+            li {
+                ul {
+                    position: static;
+                    width: 100%;
+
+                    li {
+                        background-color: #fff;
+                    }
+                }
+                &.open {
+                    ul {
+                        display: block;
+                    }
+                }
+            }
+        }
+
+        &__right {
+            flex-direction: column;
+            width: 100%;
+        }
+
+        li, li a {
+            width: 100%;
+        }
+        
+        &__list > li > a {
+            position: relative;
+            padding-right: 25px;
+
+            &::before,
+            &::after {
+                position: absolute;
+                content: "";
+                right: 17px;
+                top: 50%;
+                width: 2px;
+                height: 7px;
+                transform: translateY(-50%) rotate(-45deg);
+                background-color: #ffffff;
+                transition: .3s ease;
+            }
+
+            &::after {
+                transform: translateY(-50%) rotate(45deg);
+                right: 13px;
+            }
+        }
+
+        &__btn {
+            display: block;
+        }
+    }
 }
 
 @media (max-width: 480px) {
+    .header {
+        &__call {
+            flex-direction: column;
+        }
+
+        &__phone {
+            margin-bottom: 20px;
+        }
+
+        &__languages {
+            justify-content: center;
+        }
+
+        &__right {
+            margin-top: 30px;
+        }
+
+        &__text {
+            margin-top: 20px;
+            margin-left: 0;
+            font-weight: 600;
+            text-align: center;
+        }
+    }
 }
 
 @media (max-width: 400px) {
+}
+
+
+@media (min-width: 769px) {
+    .navigation {
+        li:hover {
+
+            ul {
+                display: block;
+            }
+        }
+    }
 }

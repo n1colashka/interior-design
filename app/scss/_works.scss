@@ -1,0 +1,114 @@
+.works {
+    padding-top: 30px;
+
+    &__tabs {
+        display: flex;
+        text-transform: uppercase;
+        color: $primary;
+        border-bottom: 1px solid $primary;
+    }
+
+    &__tab {
+        @include font('akzidenz');
+        font-size: 15px;
+        border-bottom: 3px solid transparent;
+        padding-left: 20px;
+        padding-right: 20px;
+        color: $light;
+        cursor: pointer;
+        margin-bottom: -1px;
+        transition: .3s ease;
+
+        &:first-child {
+            padding-left: 0;
+        }
+
+        &:last-child {
+            padding-right: 40px;
+        }
+        
+        &.active {
+            border-bottom: 3px solid $primary;
+        }
+    }
+
+    &__head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+    }
+
+    &__title {
+        margin-bottom: 20px;
+    }
+
+    &__item {
+        display: none;
+        &.active {
+            display: block;
+        }
+    }
+
+    &__slider {
+        height: 580px;
+    }
+
+    &__slider-thumbs {
+        height: 90px;
+        margin-top: 3px;
+
+        .swiper-slide {
+            filter: grayscale(1);
+        }
+
+        .swiper-slide.swiper-slide-thumb-active {
+            filter: grayscale(0);
+        }
+    }
+
+    .works__slider-thumbs {
+        .swiper-button-next,
+        .swiper-button-prev {
+            height: 23px;
+        }
+
+        .swiper-button-prev {
+            left: 0;
+        }
+
+        .swiper-button-next {
+            right: 0;
+        }
+    }
+    
+    &__slider-thumbs-item {
+        width: 160px;
+    }
+
+    // Swiper
+
+    .swiper-slide {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .swiper-button-next:after,
+    .swiper-button-prev:after {
+        content: none;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        background: url('../images/slider-arrow.svg') center no-repeat;
+        height: 70px;
+        transform: translateY(-50%);
+        margin: 0;
+    }
+
+    .swiper-button-next {
+        background: url('../images/slider-arrow-right.svg') center no-repeat;
+    }
+}

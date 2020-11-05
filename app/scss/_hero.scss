@@ -1,0 +1,37 @@
+.hero {
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &__wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        background-color: rgba(#000, .58);
+        min-height: 520px;
+        color: #ffffff;
+        padding-bottom: 70px;
+    }
+		
+    &__inner {
+        max-width: 570px;
+        margin: 0 auto;
+        margin-left: 200px;
+    }
+
+    &__title {
+        @include font('trivia-book');
+        text-transform: uppercase;
+        font-size: 41px;
+        line-height: 46px;
+        margin-bottom: 22px;
+    }
+
+    &__text {
+        margin-bottom: 30px;
+    }
+
+    &__btn {
+    }
+
+}

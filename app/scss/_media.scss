@@ -29,6 +29,32 @@
             }
         }
     }
+
+    .about {
+        &__inner {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        &__content {
+            margin-bottom: 30px;
+            max-width: 100%;
+        }
+
+        &__btn-wrapper {
+            text-align: center;
+        }
+    }
+
+    .achievements {
+        &__title {
+            text-align: center;
+        }
+        
+        &__slider-wrapper {
+            margin: 0 auto;
+        }
+    }
 }
 
 @media (max-width: 1024px) {
@@ -40,6 +66,19 @@
 }
 
 @media (max-width: 991px) {
+}
+
+@media (max-width: 979px) {
+    .reviews {
+        padding: 5px 0;
+        &__item {
+            align-items: center;
+        }
+
+        &__img {
+            margin-top: 0;
+        }
+    }
 }
 
 @media (max-width: 850px) {
@@ -261,9 +300,47 @@
             line-height: 36px;
         }
     }
+
+    .achievements {
+        &__slider-wrapper {
+            max-width: 300px;
+        }
+    }
+
+    .reviews {
+
+        &__slider {
+            height: 240px;
+        }
+
+        &__wrapper {
+            margin: 0;
+        }
+
+        &__button-prev,
+        &__button-next {
+            display: none;
+        }
+
+        &__content {
+            margin-left: 5px;
+        }
+
+        &__img {
+            img {
+                width: 80px;
+            }
+        }
+    }
 }
 
 @media (max-width: 400px) {
+    .achievements {
+        &__button-next,
+        &__button-prev {
+            display: none;
+        }
+    }
 }
 
 @media (max-width: 375px) {

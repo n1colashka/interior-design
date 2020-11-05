@@ -137,8 +137,63 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
+  function initAboutSlider() {
+    if (document.querySelector('.achievements__slider')) {
+      var mySwiper = new Swiper('.achievements__slider', {
+        slidesPerView: '4',
+        navigation: {
+          nextEl: '.achievements__button-next',
+          prevEl: '.achievements__button-prev'
+        },
+        spaceBetween: 30,
+        breakpoints: {
+          320: {
+            slidesPerView: '3',
+            spaceBetween: 20
+          },
+          480: {
+            slidesPerView: '4',
+            spaceBetween: 30
+          }
+        }
+      });
+    }
+  }
+
+  function initReviewsSlider() {
+    if (document.querySelector('.reviews__slider')) {
+      var mySwiper = new Swiper('.reviews__slider', {
+        slidesPerView: '2',
+        navigation: {
+          nextEl: '.reviews__button-next',
+          prevEl: '.reviews__button-prev'
+        },
+        spaceBetween: 60,
+        loop: false,
+        autoplay: {
+          delay: 3000
+        },
+        breakpoints: {
+          320: {
+            slidesPerView: '1',
+            spaceBetween: 0,
+            loop: true
+          },
+          980: {
+            slidesPerView: '2',
+            spaceBetween: 60,
+            loop: false,
+            autoplay: false
+          }
+        }
+      });
+    }
+  }
+
   initMenu();
   initHeaderAccordions();
   initTabs();
   initWorksSliders();
+  initAboutSlider();
+  initReviewsSlider();
 });

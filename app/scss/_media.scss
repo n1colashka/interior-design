@@ -14,6 +14,11 @@
 }
 
 @media (max-width: 1024px) {
+    .hero {
+        &__inner {
+            margin-left: auto;
+        }
+    }
 }
 
 @media (max-width: 991px) {
@@ -107,6 +112,20 @@
             display: block;
         }
     }
+
+    .hero {
+        &__wrapper {
+            min-height: 400px;
+            padding-top: 30px;
+            padding-bottom: 30px;
+            align-items: center;
+        }
+
+        &__title {
+            font-size: 34px;
+            line-height: 40px;
+        }
+    }
 }
 
 @media (max-width: 480px) {
@@ -132,6 +151,15 @@
             margin-left: 0;
             font-weight: 600;
             text-align: center;
+        }
+    }
+
+    .hero {
+        background-position: left -100px center;
+
+        &__title {
+            font-size: 30px;
+            line-height: 36px;
         }
     }
 }

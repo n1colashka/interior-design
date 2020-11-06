@@ -198,6 +198,38 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         }
     }
+
+    function initTextPageSlider() {
+        if (document.querySelector('.text-page__slider-wrapper')) {
+            var galleryThumbs = new Swiper('.text-page__slider-thumbs', {
+                spaceBetween: 5,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                slidesPerView: 5,
+                freeMode: true,
+                watchSlidesVisibility: true,
+                watchSlidesProgress: true,
+                observer: true,
+                observeParents: true,
+                observeSlideChildren: true,
+            });
+            var galleryTop = new Swiper('.text-page__slider', {
+                spaceBetween: 10,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                thumbs: {
+                    swiper: galleryThumbs
+                },
+                observer: true,
+                observeParents: true,
+                observeSlideChildren: true,
+            });
+        }
+    }
     
     initMenu();
     initHeaderAccordions();
@@ -205,5 +237,5 @@ document.addEventListener('DOMContentLoaded', function () {
     initWorksSliders();
     initAboutSlider();
     initReviewsSlider();
-
+    initTextPageSlider();
 });

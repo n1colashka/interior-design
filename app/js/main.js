@@ -230,6 +230,60 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         }
     }
+
+    function initItemSlider() {
+        if (document.querySelector('.item__slider-wrapper')) {
+            var galleryThumbs = new Swiper('.item__slider-thumbs', {
+                spaceBetween: 5,
+                direction: 'vertical',
+                slidesPerView: 3,
+                freeMode: true,
+                watchSlidesVisibility: true,
+                watchSlidesProgress: true,
+                observer: true,
+                observeParents: true,
+                observeSlideChildren: true,
+                
+                breakpoints: {
+                    480: {
+                        direction: 'horizontal',
+                        slidesPerView: 3,
+                    },
+                    800: {
+                        direction: 'horizontal',
+                        slidesPerView: 4,
+                    },
+                    1171: {
+                        direction: 'vertical',
+                        slidesPerView: 3,
+                    }
+                }
+            });
+            var galleryTop = new Swiper('.item__slider', {
+                spaceBetween: 10,
+                thumbs: {
+                    swiper: galleryThumbs
+                },
+                autoplay: {
+                    delay: 3000,
+                },
+                observer: true,
+                observeParents: true,
+                observeSlideChildren: true,
+            });
+        }
+    }
+
+    function initListSliders() {
+        var galleryTop = new Swiper('.list__img', {
+            observer: true,
+            observeParents: true,
+            observeSlideChildren: true,
+            pagination: {
+                el: '.swiper-pagination',
+            },
+        });
+    }
     
     initMenu();
     initHeaderAccordions();
@@ -238,4 +292,6 @@ document.addEventListener('DOMContentLoaded', function () {
     initAboutSlider();
     initReviewsSlider();
     initTextPageSlider();
+    initItemSlider();
+    initListSliders();
 });

@@ -1,0 +1,84 @@
+.order {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__content {
+        max-width: 670px;
+    }
+
+    &__title {
+        margin-bottom: 20px;
+    }
+
+    &__text {
+        p {
+            margin-bottom: 15px;
+        }
+    }
+
+    &__num {
+        font-size: 25px;
+        line-height: 26px;
+        color: $primary;
+    }
+
+    &__btn {
+        font-size: 20px;
+        margin-top: 15px;
+        padding: 20px 40px;
+    }
+
+    &__banner {
+        width: 370px;
+        padding: 25px;
+        padding-bottom: 40px;
+        color: #ffffff;
+        background-color: $primary;
+        margin-left: 20px;
+        flex-shrink: 0;
+        input {
+            font-family: Arial, Helvetica, sans-serif;
+            display: block;
+            font-size: 13px;
+            color: #999999;
+            padding: 10px 15px;
+            border: 1px solid #999999;
+            width: 100%;
+            margin-bottom: 30px;
+        }
+
+        button {
+            background-color: transparent;
+            border-color: #ffffff;
+            color: #ffffff;
+        }
+    }
+
+    &__banner-text {
+        margin-bottom: 20px;
+        strong {
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+    }
+
+    &__banner-title {
+        @include font('trivia-book');
+        font-size: 25px;
+        line-height: 31px;
+        text-transform: uppercase;
+    }
+
+    &__banner-subtitle {
+        line-height: 31px;
+        text-transform: uppercase;
+        margin-bottom: 25px;
+    }
+}
+

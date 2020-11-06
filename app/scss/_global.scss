@@ -46,6 +46,19 @@ h6 {
     padding: 0;
     margin: 0;
 }
+
+
+// Input number fix
+
+input[type='number'] {
+    -moz-appearance:textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
 .container {
     max-width: 1200px;
     width: 100%;
@@ -96,13 +109,46 @@ h6 {
     line-height: 38px;
 }
 
-// Input number fix
+.pagination {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+    padding-top: 20px;
 
-input[type='number'] {
-    -moz-appearance:textfield;
+    li {
+        position: relative;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 15px;
+        line-height: 22px;
+        color: $light;
+        margin-right: 12px;
+        margin-left: 12px;
+        margin-bottom: 10px;
+        text-decoration: underline;
+        font-weight: 400;
+
+        &::before {
+            position: absolute;
+            content: "-";
+            top: 50%;
+            transform: translateY(-50%);
+            right: -14px;
+            color: $light;
+        }
+
+        &:last-child {
+            text-decoration: none;
+            color: #9b9c9c;
+            margin-right: 0;
+            &::before {
+                content: none;
+            }
+        }
+
+        &:first-child {
+            margin-left: 0;
+            
+        }
+    }
 }
 
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-}

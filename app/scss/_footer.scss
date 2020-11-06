@@ -1,0 +1,106 @@
+.footer {
+    background-color: $light;
+    padding-top: 30px;
+    padding-bottom: 25px;
+
+    &__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-bottom: 45px;
+    }
+
+    &__logo {
+        img {
+            width: 250px;
+        }
+    }
+
+    &__call {
+        display: flex;
+        align-items: center;
+    }
+
+    &__phone {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 30px;
+        margin-right: 20px;
+        color: #ffffff;
+    }
+
+    &__navigation {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 15px;
+        line-height: 22px;
+        font-weight: 400;
+        color: #ffffff;
+        margin-bottom: 30px;
+
+        ul {
+            margin-left: 80px;
+            margin-bottom: 40px;
+            max-width: 200px;
+
+            &:first-child {
+                margin-left: 0;
+            }
+        }
+
+        li {
+            margin-bottom: 5px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            b {
+                display: inline-block;
+                text-transform: uppercase;
+                font-weight: 700;
+                margin-bottom: 15px;
+            }
+
+            a {
+                transition: .3s ease;
+                &:hover {
+                    color: rgb(116, 211, 240);
+                    text-decoration: underline;
+                }
+            }
+            
+        }
+    }
+
+    &__copy {
+        font-size: 11px;
+        line-height: 13px;
+        color: #ffffff;
+    }
+}
+
+.socials {
+
+    &__list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        li {
+            margin-left: 20px;
+            transition: .3s ease;
+            
+            &:hover {
+                transform: scale(1.1);
+            }
+            
+            &:first-child {
+                margin-left: 0;
+            }
+        }
+    }
+}

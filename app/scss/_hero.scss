@@ -1,24 +1,33 @@
 .hero {
-    position: relative;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+
+    &__slider {
+        height: 550px;
+    }
+    
+    &__slider-item {
+        position: relative;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 100%;
+    }
 
     &__wrapper {
         display: flex;
         justify-content: center;
         align-items: flex-end;
         background-color: rgba(#000, .58);
-        min-height: 520px;
         color: #ffffff;
         padding-bottom: 70px;
         margin-top: 2px;
+        height: 100%;
     }
 		
     &__inner {
         max-width: 570px;
         margin: 0 auto;
         margin-left: 200px;
+        margin-bottom: 80px;
     }
 
     &__title {
@@ -31,9 +40,7 @@
 
     &__text {
         margin-bottom: 30px;
-    }
-
-    &__btn {
+        font-weight: normal;
     }
 
 }

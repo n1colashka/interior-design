@@ -224,6 +224,42 @@
         width: 100%;
         margin-bottom: 50px;
         padding-right: 0;
+
+        &__list {
+            li > ul li ul  {
+                display: none;
+            }
+
+            &.open li > ul li ul {
+                display: block;
+            }
+
+            position: relative;
+            padding-right: 0;
+
+            li.active > a {
+                position: relative;
+                
+                &::before,
+                &::after {
+                    position: absolute;
+                    content: "";
+                    right: 17px;
+                    top: 50%;
+                    width: 2px;
+                    height: 7px;
+                    transform: translateY(-50%) rotate(-45deg);
+                    background-color: #000;
+                    transition: .3s ease;
+                }
+    
+                &::after {
+                    transform: translateY(-50%) rotate(45deg);
+                    right: 13px;
+                }
+            }
+
+        }
     }
     
     .item {
@@ -234,6 +270,10 @@
 
         &__slider-thumbs {
             width: 440px;
+        }
+
+        &__info {
+            margin-left: 0;
         }
     }
     
@@ -415,6 +455,8 @@
             max-width: 100%;
             width: 100%;
             min-height: 460px;
+            margin-left: 0;
+            margin-right: 0;
         }
 
         &__item-btn {
@@ -588,6 +630,8 @@
         }
         &__item {
             width: 90%;
+            margin-left: auto;
+            margin-right: auto;
         }
     }
 }

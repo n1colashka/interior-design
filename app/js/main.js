@@ -28,6 +28,14 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     } 
 
+    function initHeroSlider() {
+        if (document.querySelector('.hero__slider')) {
+            var mySwiper = new Swiper('.hero__slider', {
+                loop: true
+            });
+        }
+    }
+
     function initTabs() {
         const $tabs = document.querySelector('.works__tabs');
         const $tabsElems = document.querySelectorAll('.works__tab');
@@ -284,9 +292,22 @@ document.addEventListener('DOMContentLoaded', function () {
             },
         });
     }
+
+    function initMobileCategories() {
+        if (window.innerWidth <= 768 && document.querySelector('.categories__list')) {
+            const $categoryItem = document.querySelector('.categories__list li > ul > li');
+            const $categoryList = document.querySelector('.categories__list');
+
+            $categoryItem.addEventListener('click', event => {
+                event.preventDefault();
+                $categoryList.classList.toggle('open');
+            });
+        }
+    }
     
     initMenu();
     initHeaderAccordions();
+    initHeroSlider();
     initTabs();
     initWorksSliders();
     initAboutSlider();
@@ -294,4 +315,5 @@ document.addEventListener('DOMContentLoaded', function () {
     initTextPageSlider();
     initItemSlider();
     initListSliders();
+    initMobileCategories();
 });

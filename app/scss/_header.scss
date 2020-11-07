@@ -81,6 +81,7 @@
 }
 
 .navigation {
+    @include font('akzidenz');
     background-color: $primary;
     color: #ffffff;
 

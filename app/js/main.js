@@ -283,33 +283,25 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function initListSliders() {
-        var galleryTop = new Swiper('.list__img', {
-            observer: true,
-            observeParents: true,
-            observeSlideChildren: true,
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-        });
-
-        if (window.innerWidth >= 768) {
-            $('.list__img .swiper-pagination-bullet').hover(function() {
-                $( this ).trigger( "click" );
+    
+        if (document.querySelector('.list__img')) {
+            var galleryTop = new Swiper('.list__img', {
+                observer: true,
+                observeParents: true,
+                observeSlideChildren: true,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
             });
+    
+            if (window.innerWidth >= 768) {
+                $('.list__img .swiper-pagination-bullet').hover(function() {
+                    $( this ).trigger( "click" );
+                });
+            }
         }
-
-        // const $listSlides = document.querySelectorAll('.list__img .swiper-slide');
-        // $listSlides.forEach(slide => {
-        //     slide.addEventListener('mouseover', function() {
-        //         const $pagination = slide.querySelectorAll('.pagination__bullet');
-        //         $pagination.forEach(bullet => {
-        //             bulet.trigger( "click" );
-        //         });
-        //     });
-        // });
-
-        
+    
     }
 
     function initMobileCategories() {

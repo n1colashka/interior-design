@@ -663,7 +663,7 @@
 
     .list {
         .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
-            
+            position: relative;
             &::after {
                 position: absolute;
                 content: "";

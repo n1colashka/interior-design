@@ -31,7 +31,10 @@ document.addEventListener('DOMContentLoaded', function () {
     function initHeroSlider() {
         if (document.querySelector('.hero__slider')) {
             var mySwiper = new Swiper('.hero__slider', {
-                loop: true
+                loop: true,
+                autoplay: {
+                    delay: 5000,
+                }
             });
         }
     }

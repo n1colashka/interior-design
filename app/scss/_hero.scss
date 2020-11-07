@@ -1,6 +1,7 @@
 .hero {
 
     &__slider {
+        margin-top: 2px;
         height: 550px;
     }
     
@@ -19,7 +20,6 @@
         background-color: rgba(#000, .58);
         color: #ffffff;
         padding-bottom: 70px;
-        margin-top: 2px;
         height: 100%;
     }
 		

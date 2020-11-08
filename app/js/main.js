@@ -34,7 +34,11 @@ document.addEventListener('DOMContentLoaded', function () {
                 loop: true,
                 autoplay: {
                     delay: 5000,
-                }
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
             });
         }
     }
@@ -254,6 +258,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 observer: true,
                 observeParents: true,
                 observeSlideChildren: true,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
                 
                 breakpoints: {
                     480: {

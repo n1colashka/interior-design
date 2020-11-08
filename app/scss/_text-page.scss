@@ -58,6 +58,10 @@
         a {
             text-decoration: underline;
             color: $primary;
+
+            &:hover {
+                text-decoration: none;
+            }
         }
     }
 

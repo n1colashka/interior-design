@@ -81,6 +81,20 @@
             margin: 0;
         }
     
+        .swiper-button-next,
+        .swiper-button-prev {
+            top: 50%;
+            bottom: auto;
+            left: 0px;
+            right: auto;
+            transform: translateY(-60%);
+        }
+
+        .swiper-button-next {
+            right: 0px;
+            left: auto;
+            top: 50%;
+        }
     }
 }
 
@@ -148,6 +162,16 @@
         &__inner {
             flex-wrap: wrap;
             align-items: center;
+        }
+
+        &__slider {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        &__slider-thumbs {
+            margin-left: auto;
+            margin-right: auto;
         }
     }
     
@@ -426,6 +450,11 @@
             align-items: center;
         }
 
+        .swiper-button-next,
+        .swiper-button-prev {
+            display: none;
+        }
+
         &__title {
             font-size: 34px;
             line-height: 40px;
@@ -515,6 +544,12 @@
             &:first-child {
                 margin-left: 12px;
             }
+        }
+    }
+
+    .list {
+        &__items {
+            margin: 0 -15px;
         }
     }
 
@@ -651,6 +686,12 @@
     }
 }
 
+@media (max-width: 330px) {
+    .list .swiper-container-horizontal > .swiper-pagination-bullets, .list .swiper-pagination-custom, .list .swiper-pagination-fraction {
+        bottom: 30px;
+    }
+}
+
 
 @media (min-width: 769px) {
     .navigation {
@@ -689,5 +730,31 @@
                 }
             }
         }
+    }
+}
+
+@media (min-width: 769px) and (max-width: 899px) {
+    .list .swiper-container-horizontal > .swiper-pagination-bullets, .list .swiper-pagination-custom, .list .swiper-pagination-fraction {
+        bottom: 40px;
+    }
+
+    .list {
+        &__items {
+            // justify-content: center;
+        }
+        
+        &__item {
+            max-width: 250px;
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+
+        &__price {
+            margin-top: -25px;
+        }
+
+    }
+    .categories {
+        padding-right: 0;
     }
 }

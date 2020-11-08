@@ -84,6 +84,7 @@
     @include font('akzidenz');
     background-color: $primary;
     color: #ffffff;
+    font-size: 14px;
 
     &__inner {
         position: relative;

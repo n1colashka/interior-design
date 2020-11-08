@@ -71,6 +71,19 @@
         background-position: center;
     }
 
+    .swiper-slide-thumb-active {
+        &::after {
+            position: absolute;
+            content: "";
+            left: 0;
+            bottom: 0;
+            height: 2px;
+            width: 100%;
+            background-color: $primary;
+            border-top: 1px solid #cfd5d8;
+        }
+    }
+
     .swiper-button-next:after,
     .swiper-button-prev:after {
         content: none;

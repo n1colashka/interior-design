@@ -551,6 +551,11 @@
         &__items {
             margin: 0 -15px;
         }
+        &__item {
+            margin-left: auto;
+            margin-right: auto;
+            width: 90%;
+        }
     }
 
     .footer {

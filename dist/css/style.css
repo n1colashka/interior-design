@@ -1675,6 +1675,7 @@ input::-webkit-inner-spin-button {
     display: none; }
   .list__img {
     width: 100%; }
+.list__items { margin: 0; }
   .list__item {
     width: 90%;
     margin-left: auto;
